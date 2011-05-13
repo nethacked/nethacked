@@ -11,9 +11,9 @@ NetHacked is **not** a fork or mod that introduces new features or changes exist
 How to get involved
 -----------------------------------------------------------------------------
 
-Mainly, we need people to help by submitting atomic patches that fix one specific bug at a time.  Preferably this will be done via [GitHub Pull Requests](http://help.github.com/pull-requests/).  
+Mainly, we need people to help by submitting atomic patches that fix one bug at a time.  Preferably this will be done via [GitHub Pull Requests](http://help.github.com/pull-requests/).
 
-To submit a bugfix as a pull request (requires free GitHub account):
+To submit a bugfix as a pull request (requires GitHub account):
 
 1. Fork this git repository.
 2. Create an informatively-named topic branch indicating what bug is being addressed in that branch, e.g. "C343-241_fix".
@@ -21,7 +21,7 @@ To submit a bugfix as a pull request (requires free GitHub account):
 4. Send a [Pull Request](http://help.github.com/pull-requests/), letting us know you've fixed Bug X.
 5. That's it!
 
-While pull requests are the preferred method for tracking your patch submissions, there are certainly other ways you can contribute bug fixes.  You could create an issue in our [issue tracker](https://github.com/nethacked/nethacked/issues) that specifies a particular bug and directs us to the downloadable patch required to fix it, for example.  But again, sending pull requests is the preferred method.
+While pull requests are the preferred method for tracking your patch submissions, there are certainly other ways you can contribute patches.  You could create an issue in our [issue tracker](https://github.com/nethacked/nethacked/issues) that specifies a particular bug and directs us to the downloadable patch required to fix it, for example.
 
 If you'd like to help the project in any other way, please let us know.  Contact us via GitHub, or via email to *nethacked dot project at gmail*.
 
@@ -30,8 +30,3 @@ Getting the code
 
 NetHacked inherits the NetHack General Public License.  
 You can find our source code repository on GitHub at [https://github.com/nethacked/nethacked](https://github.com/nethacked/nethacked).
-
-Documentation
------------------------------------------------------------------------------
-
-TODO
