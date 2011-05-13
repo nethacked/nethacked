@@ -1,0 +1,440 @@
+==============================================================================
+NOTE:
+As bugs are fixed, they will be removed from this list.  The second column
+indicates a bugs listed status on the nethack.org webpage, NOT its status in
+our own project.  These tags are being left for reference, but the *only*
+thing indicating a bug's status as fixed or not, for the NetHacked project, is
+whether or not it is listed in this file.
+==============================================================================
+
+C341-1	Fixed	Monsters affected by stinking cloud always get angry at the hero even if the hero did not create the cloud..	
+C341-4	Fixed	opthelp does not list use_inverse	
+C341-5	Fixed	When you see your pet move, the pet may be referred to as "it".	
+C341-7	Fixed	Skilled or expert caster of fireball/cone of cold can't target a monster known only by infravision or ESP.	
+C341-10	Fixed	Fruit names ending in "us" are incorrectly considered plural.	
+C341-18	Fixed	ki-rins and couatls can wear (and may have) armor.	
+C342-12	Fixed	There are a number of places that misuse "your".	
+C342-13	Fixed	Hangup can cause loss of objects being moved internally.	
+C342-16	Fixed	If you self-genocide while polymorphed, the death message makes no sense.	
+C342-19	Fixed	Things that can kill you in the future (like stoning) can cause messages to show up out of order.	
+C342-22	Fixed	Monsters can hide under cockatrice corpses without getting stoned.	
+C342-31	Open	You can get a message telling you a monster wields a weapon it already was wielding.	
+C342-36	Fixed	If unable to see yourself while invisible and you are bestowed a spellbook, it doesn't show up on the display.	
+C342-46	fixed	Cleric cast lightning doesn't blind as other lightning does.	
+C342-50	Fixed	If you're hiding on the ceiling and try to #sit, you automatically unhide.	
+C342-51	Fixed	The game thinks trappers hide on the ceiling.	
+C342-54	Fixed	Statues of unique monsters in bones files are not handled correctly.	
+C343-1	fixed	At a pit the game can give messages with poor grammar.	
+C343-2	fixed	Wielded silver arrows don't cause silver damage on some silver-haters.	
+C343-3	fixed	In the ranger quest, monsters can end up off the map to the left.	
+C343-4	fixed	On the Rogue level, tunnelling through rock doesn't leave a passage.	
+C343-5	fixed	In wizard mode, level teleport in the endgame can cause a crash if confused.	
+C343-6	fixed	You can #sit on an object at the bottom of a pit that you are not in.	
+C343-7	fixed	When a steed pushes a boulder into a pool, the message misuses "you".	
+C343-8	fixed	Plural of Nazgul is Nazgul - not Nazguls.	
+C343-9	fixed	Trap messages referring to a named steed when hallucinating are poorly worded.	
+C343-10	fixed	If there is a corpse in a pit, you have to enter the pit to pick it up but not to eat it.	
+C343-11	fixed	If you ask for help ('?') at a "what direction" prompt, you don't get to enter a direction afterward if the cmdassist option is set.	
+C343-12	fixed	You can't use '>' to enter a pit.	
+C343-13	fixed	On polymorph, you can get the message "It turns into it".	
+C343-14	fixed	The initial and any tombstone message resulting from eating an identified artifact is gramatically incorrect.	
+C343-15	fixed	You can get a message that an invisible monster looks much better.	
+C343-16	fixed	Player polymorphed as a xorn can't pick up items in pits.	
+C343-17	fixed	After polymorphing into a xorn and returning to human form, player can be stuck in a pit that isn't there.	
+C343-18	fixed	Scaring a mimicing mimic gives an incorrect "turns to flee" message.	
+C343-19	fixed	Dipping acid in a fountain may not destroy the acid.	
+C343-20	Open	When dying immediately on entering a level, the map may show you dying on the previous level.	This doesn't matter - mostly.
+C343-21	Open	Pets can be pulled through closed doors with a leash.	
+C343-22	Fixed	You can untrap a monster in a pit while levitating.	
+C343-23	Help	Dungeon collapses after vault guard fails to lead you out.	
+C343-24	Fixed	Documented default for option "null" is "off"; default is actually "on".	
+C343-25	Fixed	You can trip over a cockatrice corpse safely.	
+C343-26	Fixed	A frozen swamp may be called a moat.	
+C343-27	Fixed	Kicked objects do not slide properly on air or water levels.	
+C343-28	fixed	There are several places that can't tell the diffence between a "hat" and a "helmet."	
+C343-29	fixed	When taking things out of a bag of holding, messages may say "lifting" instead of "removing."	
+C343-30	fixed	Cursed scroll of destroy armor on cursed armor doesn't always interact correctly.	
+C343-31	fixed	If you hit a cockatrice with a weapon that breaks, you can be stoned.	
+C343-32	Fixed	When blind and levitating, the hero can still discover stairs.	
+C343-33	Fixed	Sometimes a monster may remain hidden under a corpse that has rotted away.	
+C343-34	Fixed	Mimics on the rogue level may try to mimic a closed door.	
+C343-35	fixed	Polymorphed or shapechanged monsters may get the wrong number of hit points.	
+C343-36	fixed	Weight of corpses on special levels may not be calculated correctly.	
+C343-37	Fixed	Mimics may mimic a boulder over a pit or hole.	
+C343-38	Open	Dismounting and kicking a monster that jumps may result in landing on the wrong side of a wall.	
+C343-39	fixed	Restoring a game where the character is wielding Sting may result in temporary display errors during the restore process.	
+C343-40	fixed	Monster thrusting one of multiple wielded daggers gives misleading message.	
+C343-41	fixed	A rolling boulder falling into a pit you can't see only makes a sound if the hero is blind.	
+C343-42	fixed	If a fire trap melts ice, it may trigger twice in the same turn.	
+C343-43	Fixed	An invisible troll that revives may be shown until it moves.	
+C343-44	fixed	Shopkeepers, doors, and traps interact oddly.	
+C343-45	fixed	Dropping the corpse of a unique monster without a personal name down the stairs gives a badly formed response.	
+C343-46	fixed	Breaking up a boulder or statue can result in pieces that are described incorrectly.	
+C343-47	fixed	Monster and hero have different odds to err when throwing a greased weapon.	
+C343-48	fixed	Killing your pet doesn't get you any experience when it should.	
+C343-49	fixed	The boulder does not show up in a bones file caused by death by rolling boulder.	
+C343-50	fixed	A sleeping steed may answer a #chat.	
+C343-51	fixed	Luck's effect on random events isn't always as intended.	
+C343-52	fixed	Worn or wielded objects destroyed by dipping into lit potions of oil are not handled properly; this can result in odd game behavior.	
+C343-53	fixed	If a shopkeeper is trapped adjacent to the door, the game may get confused and issue impossible or panic messages.	
+C343-54	fixed	"Ulch" cannibalism message grammar is poor.	
+C343-55	fixed	"Ulch" messages have inconsistent capitalization.	
+C343-56	fixed	Gas spores can't attack while hero is praying.	
+C343-57	fixed	#enhance command descriptions in Guidebook and game do not match.	
+C343-58	fixed	#conduct command description grammar is poor	
+C343-59	fixed	Engulfer stoned swallowing hero polymorphed to cockatrice causes incorrect screen display. If hero has ball & chain, game can panic.	
+C343-60	fixed	Several messages delivered when hero's fingers are slippery have poor grammar.	
+C343-61	fixed	Using a WIZKIT including the quest artifact will crash the game at startup.	
+C343-62	fixed	Riding into a magic portal gives an extra, useless message.	
+C343-63	fixed	You can drink from a sink, fountain, or while underwater while swallowed.	
+C343-64	fixed	A black light leaves an hallucinated something while exploding.	
+C343-65	fixed	A monster that "shrieks in pain" may not awaken others nearby.	
+C343-66	fixed	Co-aligned unicorns in a bones file may be hostile.	
+C343-67	fixed	Finding a statue when searching while blind doesn't update map.	
+C343-68	fixed	Incorrect message may be given when a spellcasting monster summons other monsters.	
+C343-69	fixed	Attempting to add more candles than needed to a candelabrum with at least one candle gives an incorrect message.	
+C343-70	fixed	Experience may not be correctly gained for monsters causing nonphysical damage.	
+C343-71	Fixed	When swapping places with a pet pushes it into a trap, the messages are out of order.	
+C343-72	Fixed	You get confusing messages when you stop levitating while on a flying steed.	
+C343-73	fixed	Trying to kick a monster on a level forbidding teleport may give a bogus "teleports" message.	
+C343-74	fixed	Entering a long running, uninterruptible command after stoning starts will kill you.	
+C343-75	fixed	Eating Medusa's corpse may not work properly.	
+C343-76	fixed	A tin of Medusa meat isn't warned about properly.	
+C343-77	fixed	Some messages referring to monsters that look like horses refer to claws.	
+C343-78	fixed	Digging in an existing hole charges you for the time it takes to dig the whole hole.	
+C343-79	fixed	"Mr." or "Ms." may show up in front of names when it should not.	
+C343-80	fixed	Tame monsters with multiple attacks may allow themselves to be killed through passive attacks.	
+C343-81	fixed	Ghosts can be slimed.	
+C343-82	fixed	Land mine explosion on a drawbridge doesn't work right.	
+C343-83	fixed	An eating pet will miss out on ascension.	
+C343-84	fixed	"finally finished" may be displayed when not eating.	
+C343-85	fixed	Sometimes the hero can't move when conscious.	
+C343-86	fixed	Hero can appear to be in the wall after destroying a drawbridge.	
+C343-87	fixed	Sometimes shop items the hero is forced to buy can be sold twice.	
+C343-88	fixed	Polymorphing a statue into a boulder can leave an incorrect display.	
+C343-89	Fixed	Unpaid objects damaged or improved in shops are not accounted for properly.	
+C343-90	fixed	"I u" with only one item unpaid lists the price twice.	
+C343-91	fixed	Auto-cursing armor does not do so when worn by monster.	
+C343-92	fixed	A blind player may find a trap which then fails to show up on the map.	
+C343-93	fixed	Astral vision can confuse the ; command.	
+C343-94	fixed	Probing a re-animated statue may cause a panic.	
+C343-95	fixed	If killed by the wish from a magic lamp (or similar situation) and a bones file is produced, the bones file has the lamp in the wrong state.	
+C343-96	fixed	If player aborts "In what direction?" question, prompt may remain displayed.	
+C343-97	fixed	^R and ^L don't work in numberpad mode	
+C343-98	fixed	Chatting with quest leader brought back from the dead doesn't work.	
+C343-99	fixed	Hero can still see for brief period after being blinded by potion vapors.	
+C343-100	fixed	Game may crash if thrown potion hits bars before a monster.	
+C343-101	fixed	The hero can see some things while asleep.	
+C343-102	Open	Messages delivered when the ceiling collapses on a swallowed hero need revision.	
+C343-103	fixed	The hero is not protected from a mind flayer during successful prayer.	
+C343-104	fixed	Message from angry shopkeeper giving a price when hero picks up an object has poor spacing and construction.	
+C343-106	fixed	Sunsword continues to glow after its wielder dies.	
+C343-107	fixed	Killing your own steed never leaves a corpse.	
+C343-108	Open	Entering "e-" does not remove the prompt.	
+C343-109	fixed	There is a grammar error in the Tourist leader's greeting.	
+C343-110	fixed	Game can crash if shopkeeper dies while character is praying.	
+C343-111	fixed	Grammar of some graveyard sounds messages is wrong in some cases.	
+C343-112	fixed	Hero and monster afflicated with lycanthropy are treated differently.	
+C343-113	fixed	When flying down a hole or a ladder, the messages are inaccurate.	
+C343-114	fixed	Removing some but not all the boulders from a location confuses the vision system.	
+C343-115	fixed	Sleeping or paralyzed unicorns can catch gems.	
+C343-116	fixed	Grammar error in messages related to choking on gold.	
+C343-117	Fixed	Gaining and losing levels in normal and monster form do not balance.	
+C343-118	fixed	Some messages use "mirror" where they should use "looking glass."	
+C343-119	fixed	Options IBMgraphics, DECgraphics, and MACgraphics interact oddly in the config file, resulting in odd listings from the O command.	Workaround: only specify one option in the config file.
+C343-121	Fixed	Eating various brains which should have special handling, don't.	
+C343-122	fixed	Alignment of Angels is not handled consistently.	
+C343-123	Fixed	Plural of "mother-in-law" is incorrect.	
+C343-124	fixed	You can't rub a touchstone on gold.	
+C343-125	fixed	Killing a vault guard outside a vault gives incorrect feedback.	
+C343-126	fixed	When wielding Greyswandir, feedback from a trapped chest may be wrong.	
+C343-127	fixed	If a vault guard leads the hero to gold in the rock, inappropriate feedback is given.	
+C343-128	Fixed	Feedback for gas spore explosion when hallucinating could be improved.	
+C343-129	Fixed	Cancelling objects in or near a shop doorway may make the shopkeeper think you are a thief.	
+C343-130	fixed	Sometimes you can't rub an arbitrary object on a touchstone.	
+C343-131	fixed	Message has poor grammar if hero killed when stealing cockatrice corpse from a monster.	
+C343-132	fixed	Message when death caused by kicking an object can be too verbose.	
+C343-133	Fixed	Effects of varying consuming Medusa are inconsistent.	
+C343-134	Fixed	Being petrified by swallowing a cockatrice violates foodless conduct.	
+C343-135	fixed	Several quest messages are inappropriate if the hero is blind.	
+C343-136	fixed	A samurai quest guardian message uses "ninja" where "ronin" is intended.	
+C343-137	fixed	Demons may demand money from (and get paid by) a fainted hero.	
+C343-138	fixed	Some spheres pick up objects and some don't.	
+C343-139	fixed	There's no feedback when an unseen drawbridge opens or closes.	
+C343-140	Fixed	Pets may continue eating after being paralyzed or falling asleep.	
+C343-141	fixed	Running, searching, and resting should stop wnen levitation ends.	
+C343-142	Fixed	Shopkeepers can be identified while hallucinating.	
+C343-143	Fixed	Leprechauns stealing gold from a mounted hero cause oddly worded messages.	
+C343-144	fixed	Creatures that can fit under doors can't fit through diagonal gaps.	
+C343-145	fixed	Mattock is mishandled when forcing locks.	
+C343-146	fixed	Unseen wand of striking becomes known if zapped by unseen monster and it hits a door.	
+C343-147	Fixed	The game panics if a magic trap tames a monster that just expelled the hero.	
+C343-148	Fixed	Changing locations while asleep lets you see objects or read engravings.	
+C343-149	Fixed	Polymorphed spellbooks don't behave as intended.	
+C343-150	fixed	Gender and/or size of some quest leaders and nemeses are wrong.	
+C343-151	fixed	Monsters can teleport to or be created outside of legal area in special levels.	
+C343-152	Fixed	Using a cursed lamp while blind may give inappropriate messages.	
+C343-153	Fixed	Player polymorphed into guardian naga spits the wrong kind of venom.	
+C343-154	fixed	Candles are fireproof.	
+C343-155	Fixed	Proper names may be incorrectly preceeded by "the" when hallucinating.	
+C343-156	Fixed	Reading scrolls may give redundant feedback messages.	
+C343-157	fixed	Worms don't have scales.	
+C343-158	fixed	Krakens have tentacles.	
+C343-159	fixed	Stalkers have a head.	
+C343-160	fixed	Name "leather spellbook" is misleading.	
+C343-161	Fixed	A scroll of charging that has disappeared may still show in the list of things to charge.	
+C343-162	fixed	Using magicbane may cause an ungrammatical message.	
+C343-163	fixed	Antholes are mispopulated under some conditions.	
+C343-164	fixed	Cancelled nurses may give inappropriate messages.	
+C343-165	Fixed	Scroll of mail can be abused slightly.	
+C343-166	fixed	Pits dug in vault guard's corridor don't get removed.	
+C343-167	Fixed	Length of time swallowed is sometimes calculated incorrectly.	
+C343-168	fixed	Shattering a monster's weapon doesn't work right if the weapon is part of a stack of more than one.	
+C343-169	Fixed	Autopickup fails during a failed untrap attempt.	
+C343-170	Fixed	Damage by silver weapons is sometimes higher than intended when hero is polymorphed.	
+C343-171	Fixed	Silver weapon damage message is sometimes missing when hero is polymorphed.	
+C343-172	fixed	Crash could occur when monster uses potion or food to cure stoning or confusion.	
+C343-173	fixed	Monster eating lizard corpse is not handled correctly.	
+C343-174	fixed	Drum of earthquake gives inappropriate message if hero or monster is in a pit.	
+C343-175	fixed	Chatting to hostile prisoners may give an inappropriate message.	
+C343-176	fixed	Disintegration breath hitting equipment carried by monsters is not handled properly; if the monster life-saves the situation is worse; saddles are especially troublesome.	
+C343-177	fixed	First false rumor is displayed as gibberish on some platforms.	
+C343-178	fixed	Wisdom is mishandled when rumors are used for random graffiti.	
+C343-179	fixed	If a monster is killed or tamed while over water (or by a drawbridge) while carrying a potion of acid, the game may panic.	
+C343-180	fixed	In an obscure case on special levels, troll corpses may fail to revive and lizard corpses may revive.	
+C343-181	Fixed	The hero is welcomed to Delphi even if the Oracle was previously angered.	
+C343-182	fixed	Putting on the Eyes of the Overworld while blind gives an ungrammatical message.	
+C343-183	fixed	Jumping over an already seen trap may give an ungrammatical message.	
+C343-184	Open	Levitation via worn equipment is not implemented for monsters.	
+C343-185	fixed	No message is generated when attempting to name a monster that cannot be named by the player.	
+C343-186	fixed	Some messages referring to "priestess" say "priest."	
+C343-187	Fixed	Meditating monsters continue meditating when affected by something which wakes sleeping monsters.	
+C343-188	fixed	Specifying role and/or race and an invalid alignment in NETHACKOPTIONS or config file causes a misleading message.	
+C343-189	fixed	Temple donations and protection lost to gremlin attack interact incorrectly.	
+C343-190	Fixed	Monsters can hide while trapped or holding the hero.	
+C343-191	fixed	When an unseen monster forces a polymorphed hero out of hiding, feedback is insufficient.	
+C343-192	fixed	If invocation is performed while hero is trapped, hero remains trapped.	
+C343-193	Fixed	Polymorphed hero can fall into water once and crawl out twice.	
+C343-194	Fixed	Saving and restoring a game while punished and swallowed sometimes loses the ball and chain.	
+C343-195	Fixed	Glass wand thrown and broken in a shop is not charged for.	
+C343-196	Fixed	Wielded light source may get missed by rust trap.	
+C343-197	fixed	Attacking a hidden monster sensed via ongoing monster detectionis interrupted inapropropriately.	
+C343-198	fixed	Playing in a 20 or 21 line window can cause the game to crash.	
+C343-199	fixed	The database entry for "monk" has a typo.	
+C343-200	fixed	In the quest, it's possible to accidently skip the locate level.	
+C343-201	fixed	Phrasing of message when one monster attacks another with stacked weapons is odd.	
+C343-202	Fixed	Pushing a boulder onto a level teleporter trap could cause repeated messages.	
+C343-203	fixed	Hero arriving on a very crowded level may land on a monster causing game state corruption and possibly a crash.	
+C343-204	Fixed	Hero grabbed or engulfed due to conflict should be released when conflict ends.	
+C343-205	Fixed	Changes in hallucination state are not reflected properly when also mimicing.	
+C343-206	fixed	Divine gifts resulting from #offer are identified when blind.	
+C343-207	fixed	Certain items that should never be created in Gehennom can be created there.	
+C343-208	fixed	Hero can be blinded while fainted.	
+C343-210	fixed	Hero can "feel a bit steadier" while unconscious.	
+C343-211	fixed	Engraving under water gives a poorly worded message.	
+C343-212	fixed	If the hero is killed by a thrown potion of burning oil, the game will panic.	
+C343-213	fixed	Display of stinking cloud may be incorrect when wearing Eyes of the Overworld.	
+C343-214	fixed	Monster escaping by changing levels in the wizard tower may end up outside the tower too easily.	
+C343-215	fixed	Elbereth is sometimes ignored by monsters.	
+C343-216	fixed	Fireproof containers catch fire in lava.	
+C343-217	Fixed	Missile which kills engulfer is temporarily lost when hero is expelled.	
+C343-218	fixed	Applying a wielded cream pie can crash the game.	
+C343-219	fixed	Hero can die due to "burned by burning" or "drowned by drowning."	
+C343-220	Fixed	Eating a Rider corpse doesn't work quite right.	
+C343-221	Fixed	Jabberwoks do not always wake up when they should.	
+C343-222	Fixed	It's possible to end up wielding a cockatrice corpse when no longer polymorphed.	
+C343-223	fixed	Hidden pet can follow hero down stairs, remain hiding and show up as hidden monster. Also can happen with a magic whistle.	
+C343-224	fixed	Carrying too many items creates uselessly long prompts.	
+C343-225	fixed	Hero can sometimes carry too many boulders.	
+C343-226	Fixed	Inventory display doesn't mention unpaid items in a container the hero owns.	
+C343-227	fixed	Container dropped in a shop then moved to an untended shop behaves oddly.	
+C343-228	fixed	Cloak of magic resistance is active when it shouldn't be.	
+C343-229	Fixed	Hero can dip or apply grease to a worn item that is covered by another worn item.	
+C343-230	fixed	Drawbridges act differently depending on which direction they are pointing.	
+C343-231	fixed	Time is distorted while sinking into lava.	
+C343-232	fixed	Hero can be slimed while in lava.	
+C343-233	fixed	Hero polymorphed into Quantum Mechanic may get erroneous messages about disappearing monsters.	
+C343-234	Fixed	Sacrifice on an altar can have unintended consequences.	
+C343-235	fixed	Casting spell of protection gives incorrect message if hero is swallowed or in rock.	
+C343-236	fixed	Engraving works in places it shouldn't.	
+C343-237	Fixed	The relationship between crossbow use and strength is wrong.	
+C343-238	fixed	(Unix and VMS only) The "Who are you?" prompt does not accept digits in the response.	
+C343-239	fixed	Engravings can transfer between a moat and a drawbridge.	
+C343-240	fixed	Hero can create a pit in air.	
+C343-241	Fixed	Hero is not charged for breaking the lock on a container owned by a shop.	
+C343-242	fixed	Shopkeepers and priests avoid graves when they should not.	
+C343-243	fixed	Hero can throw without hands.	
+C343-244	fixed	Sometimes you can eat artifacts you can't touch with your hands.	
+C343-245	fixed	Hero trying to kick beyond map edge is handled improperly.	
+C343-246	fixed	Engraving with an empty wand handles time wrong.	
+C343-247	fixed	A magic portal may be deactivated if the game is saved due to hangup while changing levels.	Leave the level some other way then return to it.
+C343-248	fixed	You can't put candles in a candelabrum while underwater.	
+C343-249	fixed	There are a number of errors handling vomit; and real rats can't vomit.	
+C343-250	Open	Rust-causing targets can reveal other information about a weapon.	
+C343-251	fixed	Monsters sleeping due to being hit may wake up at the wrong time.	
+C343-252	fixed	There is a typo in the quote from "The Count of Monte Cristo."	
+C343-253	fixed	Choking on certain food items doesn't work properly.	
+C343-254	fixed	Shapechanger's don't take advantage of being mimics or hiders.	
+C343-255	fixed	Tinning on a full level fails improperly.	
+C343-256	fixed	Very very very long messages can cause a crash.	
+C343-257	fixed	Cursed corpses wielded by monsters are not handled properly.	
+C343-258	fixed	Grammar error in samurai quest: "wakarimasu?" instead of "wakarimasu ka?"	
+C343-259	fixed	"Dr. Dolittle" is spelled incorrectly.	
+C343-260	fixed	Ridden steeds are sometimes immune to gas traps.	
+C343-261	Fixed	Sleeping steeds can jump.	
+C343-262	fixed	Polyporph mis-handles a used and wielded leash.	
+C343-263	Fixed	Probing may miss Schroedinger's cat.	
+C343-264	fixed	"You must drop your weapon" may appear when it should not.	
+C343-265	fixed	Force may work when hero can't reach lock being forced.	
+C343-266	fixed	Hero on drawbridge when it's destroyed is not handled properly.	
+C343-267	fixed	Game says monster speed changes even if monster can't move at all.	
+C343-268	fixed	Used up potion of acid may end up in bones file.	
+C343-269	fixed	Bones file created after hero dies outside shop may mis-handle items.	
+C343-270	fixed	Dying in a shop while wielding two weapons may cause a warning message.	
+C343-271	fixed	Pet messages at the very end of the game may appear in the wrong place.	
+C343-272	fixed	Corrupted score file can crash the game.	
+C343-273	Fixed	Changing alignment and held artifacts interact incorrectly.	
+C343-274	fixed	Odd message when attempting to apply a wielded towel.	
+C343-275	fixed	If a lit, wielded, candle or potion of oil burns out, the game may crash.	
+C343-276	fixed	If a figurine auto-transforms while wielded or worn, the game may crash.	
+C343-277	Fixed	Wooden weapons don't always burn when they should.	
+C343-278	fixed	Quest leaders are too likely to be affected by traps.	
+C343-279	Fixed	Kicked arrows may get wrong bonuses.	
+C343-280	Fixed	Ranged polearm attack doesn't always work properly.	
+C343-281	Fixed	Kicking shop-owned food is not always accounted for correctly.	
+C343-282	Fixed	Damage calculation may be wrong when hero is polymorphed into a pudding.	
+C343-283	fixed	Long walks take a non-optimial path.	
+C343-284	Fixed	Activating a shop-owned figurine sometimes doesn't entail shop charges.	
+C343-285	Fixed	Water elementals can be trapped in a bear trap.	
+C343-286	Fixed	Polymorph and lycanthropy do not interact properly.	
+C343-287	fixed	Hero polymorphed into monster with kick attack doesn't get bonus from ring of increase damage when kicking.	
+C343-288	Fixed	The message "a monster appears" can show up when multiple monsters appear.	
+C343-289	fixed	If magical removal of a steed's saddle is fatal to the hero, the saddle may still be on the steed in a bones file.	
+C343-290	fixed	Rings do not show up in the "what do you want to charge?" prompt when they should.	
+C343-291	Fixed	Backstab bonus interacts incorrectly with thrown weapons and two-weapon mode.	
+C343-292	Fixed	Touching a pile of objects while blind does not always work correctly.	
+C343-293	Fixed	There are a number of errors changing words between singular and plural forms.	
+C343-294	fixed	Orcs and gnomes do not respond to #chat when they should.	
+C343-295	fixed	Casting stone-to-flesh on self while wielding a figurine can cause the game to panic.	
+C343-296	Fixed	Sunsword doesn't work as expected against shades.	
+C343-297	fixed	Lit potion may survive hero dying from splattered oil burning on the floor.	
+C343-298	fixed	Kicking at "empty space" uses no time.	
+C343-299	fixed	Killing tame engulfer from inside gives a warning message.	
+C343-300	Fixed	Amulet of strangulation may kill forms that can't be strangled.	
+C343-301	fixed	Nymphs can steal things they can't pick up.	
+C343-302	fixed	Amnesia of object discoveries may forget to forget one thing.	
+C343-303	Fixed	Gem probabilities are not reset properly on level revisit.	
+C343-304	Fixed	Message given when damaging a closed drawbridge may refer to a wall.	
+C343-305	Fixed	Attacking with an applied polearm ignores the "confirm" option.	
+C343-306	Fixed	Engulfer under influence of conflict or confusion can swallow a monster and not be affected by water/lava/trap under monster until next turn.	
+C343-307	Fixed	Unicorn horn interacts incorrectly with ring of sustain ability.	
+C343-308	Fixed	A hidden, dead monster can revive hidden under its own corpse.	
+C343-309	Fixed	Droppinng Heart of Ahriman may give odd message sequence.	
+C343-310	Fixed	Applying an unpaid stack of potions of oil forces hero to buy all of them.	
+C343-311	Fixed	Price of unpaid shop items may change when hero is forced to buy.	
+C343-312	Fixed	Monster can attack with a polearm it was unable to wield.	
+C343-313	Fixed	"You trip over it" may appear even after you know what "it" is.	
+C343-314	Fixed	Drowning on the Plane of Water lists cause of death as "drowned in a moat."	
+C343-315	fixed	Small monsters dropping items due to weight use the wrong weights.	
+C343-316	fixed	Monsters who shouldn't will attack the Wizard to get the Amulet.	
+C343-317	Fixed	Bones data can contain odd characters from player's dogname, catname, or fruit options; this can cause odd terminal-dependent behavior.	
+C343-318	fixed	Opening or closing the castle drawbridge using music takes no time.	
+C343-319	Fixed	Grid bugs can be forced to move diagonally.	
+C343-320	Fixed	Reading scroll of mail break illiterate conduct.	
+C343-321	Fixed	Hero and monsters can walk through a long worm's tail diagonally.	
+C343-322	Fixed	Forced attack on a boulder says "you attack thin air."	
+C343-323	Fixed	Objects dropped as a monster dies don't interact properly with the environment.	
+C343-324	fixed	Cutting a long worm in two will crash the game if the cut takes the worm to 1 HP or if long worms had become extinct.	
+C343-325	Fixed	Hole in ice may be described as a "moat."	
+C343-326	Fixed	Open and close commands may give inappropriate feedback near a drawbridge.	
+C343-327	fixed	Message "suddenly you cannot see the" monster can be displayed when the monster remains visible for some reason.	
+C343-328	Fixed	Messages when opening a tin may imply implausible timing.	
+C343-329	fixed	A just-dead monster may still claim to be fleeing.	
+C343-330	Fixed	Wrong message may be delivered when seeing a pet eating.	
+C343-331	Open	Sleeping monster reacts to a mirror.	
+C343-332	Fixed	The message given when multiple potions of acid explode refers to a single potion.	
+C343-333	fixed	Vault guard asks hero's name while hero is engulfed.	
+C343-334	Fixed	Defining GOLDOBJ drops a slot from the inventory.	
+C343-335	fixed	Cloak of invisibility and blindness do not interact reasonably.	
+C343-336	Fixed	A shapechanger starting out in changed form gets incorrect inventory items.	
+C343-337	Fixed	It's possible to create an object of 0 gold pieces.	
+C343-338	Fixed	Wizard-mode command sanity_check misses nested containers and migrating monsters.	
+C343-339	Fixed	Screen and time are not always updated properly when opening or closing doors while blind.	
+C343-340	Fixed	Secret door detection does not interact properly with features of the Planes of Water and Air.	
+C343-341	Open	In minetown, it's possible to teleport into a room that requires digging to escape from.	
+C343-342	Fixed	Potion thrown by monster which hits long worm's tail says it hit its tail.	
+C343-343	Fixed	Helm of Opposite alignment gives incorrect piety level.	
+C343-344	fixed	NetHack thinks jellyfish have heads.	
+C343-345	fixed	Attempting to remove cursed lenses gives a message with poor grammar.	
+C343-346	Fixed	Attempting to put on some items when the item is already wielded or quivered and failing for a variety of reasons gives a message with poor grammar.	
+C343-347	Fixed	Picking up and wearing an unknown ring while blind sometimes gives out too much information.	
+C343-348	Fixed	Exercise before polymorph may affect polymorphed character.	
+C343-349	Fixed	An identify scroll is wasted if space is typed and steps off the end of the inventory list.	
+C343-350	Fixed	Eels don't hide when they are supposed to.	
+C343-351	fixed	Alchemy-caused explosions don't wake nearby monsters.	
+C343-352	fixed	Secret doors in lit walls don't always display properly.	
+C343-353	Fixed	Aborting key or lock pick with escape uses a turn.	
+C343-354	Fixed	Probing while engulfed ignores the fact that the hero is in the monster.	
+C343-355	fixed	Archeologists start out at basic skill level in sling.	
+C343-356	Fixed	Wearing an amulet of restful sleep confuses internal sleep state bookkeeping.	
+C343-357	Open	Rust monsters may chew non-ferrous items.	
+C343-358	Fixed	If no co-aligned artifacts are available for gifting when required, gifting fails repeatedly.	
+C343-359	fixed	Setting the fruit name fails if the new name is already known but happens to be not at the end of an internal list.	
+C343-360	fixed	A monster wearing a suit can still put on a shirt.	
+C343-361	Fixed	The message "you feel shuddering vibrations" does not always get displayed when it should.	
+C343-362	Fixed	Objects dropped during polymorph may be incorrectly polymorphed.	
+C343-363	Fixed	The case of monsters eating green slime corpses is not handled correctly.	
+C343-364	Fixed	If player's hand slips while naming an object, 'z' is never picked as the new letter.	
+C343-365	Fixed	Hero may remove armor for nymph or succubus while asleep.	
+C343-366	Fixed	Concealed mimic not always revealed when it should be.	
+C343-367	Fixed	Fainting with a wielded cockatrice corpse doesn't behave as expected.	
+C343-368	Fixed	Blinded hero knows too much about a monster summoning insects.	
+C343-369	fixed	Mounted hero on life-saved steed gets repeated warning messages until hero dismounts.	
+C343-370	Open	Travel (_) command can get stuck trying to plot a path past an interesting dungeon feature, for example, a trap or fountain.	
+C343-371	Fixed	Stethoscopes can sometimes be used more often than intended.	
+C343-372	Fixed	A fatal explosion can give the player messages in the wrong order if carried items are destroyed.	
+C343-373	Fixed	Shopkeepers can polymorph into forms that don't let them do their jobs.	
+C343-374	Fixed	When ploymorphed into a grid bug, attempting to move in an illegal direction is handled ungracefully.	
+C343-375	Fixed	A mimic posing as a statue is not handled properly.	
+C343-376	fixed	When trying to move down, Hero can be levitating and stuck in the floor at the same time.	
+C343-377	Fixed	Hero hidden from monster is still treated as a normal target for range attack.	
+C343-378	Fixed	Hero hiding as a small mimic can end up stuck to a monster after returning to human form.	
+C343-379	Fixed	Spelling errors "sprit" and "truely" in quest text.	
+C343-380	fixed	Mimics pretending to be doors show up on the Rogue level.	
+C343-381	Fixed	Attacking by applying a polearm doesn't scuff engraving under hero.	
+C343-382	Fixed	Auto-wielding a polearm may take no time.	
+C343-383	Fixed	Applying a bullwhip while hero is at edge of map may cause a panic or crash.	
+C343-384	fixed	Cutting a level 0 long worm in half may lead to a worm with 0 HP, which may cause a crash.	
+C343-385	Fixed	D command doesn't handle u choice correctly if only unpaid items are inside containers.	
+C343-386	Fixed	Pearl rings can rust.	
+C343-387	Fixed	T-shirts can be read when covered.	
+C343-388	Fixed	Spell damage and low intelligence interact incorrectly.	
+C343-389	Fixed	Dragon breath and certain other effects hitting a hidden secret door does not damage it.	
+C343-390	Fixed	Breaking a wand which may zap but not damage a door gives an odd message.	
+C343-391	fixed	Hero polymorphed into a mimic with #monster and hiding as an object does not unhide when polymorphing into a non-mimic.	
+C343-392	Fixed	A stunned monster may both walk away from the hero and keep holding him.	
+C343-393	Fixed	The messages produced when throwing a poisoned weapon which loses its poison are in a confusing order.	
+C343-394	fixed	Throwing a potion of acid into water may panic the game.	
+C343-396	Fixed	Shopkeeper does not charge hero for an unsold boulder that is destroyed with a pick-axe.	
+C343-397	fixed	A badly formed message may be produced if a pick-axe is applied to a boulder and the boulder is removed by a monster.	
+C343-398	fixed	The game may crash if a wielded potion of polymorph is drunk.	
+C343-399	fixed	Messages referring to a named vault gaurd have grammatical errors.	
+C343-400	Fixed	Wearing a cloak of displacement identifies it even if hero can't see.	
+C343-401	Fixed	Wearing an elven cloak identifies it even if hero is already stealthy.	
+C343-402	Fixed	Putting on a ring of stealth never identifies it.	
+C343-403	Fixed	Hero can write a scroll not sufficiently identified.	
+C343-404	Fixed	Writing a scroll can give a badly phrased message if the scroll is known by its appearance.	
+C343-405	Fixed	Some quest artifacts are too easily affected by stone-to-flesh.	
+C343-406	Fixed	One of the coyote names is spelled wrong.	
+C343-407	Fixed	If reading an unknown scroll of teleport puts the hero on another scroll of teleport, the second one is still treated as unknown.	
+C343-408	Fixed	Being killed by a monster with a long name can send the game into an infinite loop.	
+C343-409	Fixed	Unlocking a mimic pretending to be a door is not handled properly.	
+C343-410	Fixed	Using an unlocking tool on a boulder that's really a mimic and located in a doorway is not handled properly.	
+C343-411	Fixed	A purple worm can end up in wall or rock when swallowing a ghost or xorn.	
+C343-412	Fixed	Unpaid shop items stolen from hero remain on hero's bill.	
+C343-413	Fixed	While blind, some actions resulting in "Wait! That's a monster!" for a mimic posing as a door do not update the display correctly.	
+C343-414	Fixed	#untrap of a known trap location with a concealed mimic gives correct message but does not update the display.	
+C343-415	Fixed	Mail daemons can be created when populating special levels with demons.	
+C343-416	Fixed	Being disintegrated by divine wrath gives an inappropriate message.	
+C343-417	Fixed	Polymorphing into a human form may give a message with the wrong gender.
+
