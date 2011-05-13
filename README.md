@@ -23,7 +23,7 @@ To submit a bugfix as a pull request (requires free GitHub account):
 
 While pull requests are the preferred method for tracking your patch submissions, there are certainly other ways you can contribute bug fixes.  You could create an issue in our [issue tracker](https://github.com/nethacked/nethacked/issues) that specifies a particular bug and directs us to the downloadable patch required to fix it, for example.  But again, sending pull requests is the preferred method.
 
-If you'd like to help the project in any other way, please let us know.
+If you'd like to help the project in any other way, please let us know.  Contact us via GitHub, or via email to *nethacked dot project at gmail*.
 
 Getting the code
 -----------------------------------------------------------------------------
