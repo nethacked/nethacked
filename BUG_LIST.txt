@@ -1,10 +1,8 @@
 ==============================================================================
 NOTE:
-As bugs are fixed, they will be removed from this list.  The second column
+As bug's are fixed, they will be removed from this list.  The second column
 indicates a bugs listed status on the nethack.org webpage, NOT its status in
-our own project.  These tags are being left for reference, but the *only*
-thing indicating a bug's status as fixed or not, for the NetHacked project, is
-whether or not it is listed in this file.
+our own project.  These tags are being left for reference only.
 ==============================================================================
 
 C341-1	Fixed	Monsters affected by stinking cloud always get angry at the hero even if the hero did not create the cloud..	
