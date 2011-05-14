@@ -1,7 +1,7 @@
 ==============================================================================
 NOTE:
-As bug's are fixed, they will be removed from this list.  The second column
-indicates a bugs listed status on the nethack.org webpage, NOT its status in
+As bugs are fixed, they will be removed from this list.  The second column
+indicates a bug's listed status on the nethack.org webpage, NOT its status in
 our own project.  These tags are being left for reference only.
 ==============================================================================
 
