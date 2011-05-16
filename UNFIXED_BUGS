@@ -3,7 +3,15 @@ NOTE:
 As bugs are fixed, they will be removed from this list.  The second column
 indicates a bug's listed status on the nethack.org webpage, NOT its status in
 our own project.  These tags are being left for reference only.
+
+Contents:
+1. Core Bugs
+2. Spoiler Core Bugs
 ==============================================================================
+
+
+1. Core Bugs
+------------------------------------------------------------------------------
 
 C341-1	Fixed	Monsters affected by stinking cloud always get angry at the hero even if the hero did not create the cloud..	
 C341-4	Fixed	opthelp does not list use_inverse	
@@ -436,3 +444,30 @@ C343-415	Fixed	Mail daemons can be created when populating special levels with d
 C343-416	Fixed	Being disintegrated by divine wrath gives an inappropriate message.	
 C343-417	Fixed	Polymorphing into a human form may give a message with the wrong gender.
 
+
+2. Spoiler Core Bugs
+-------------------------------------------------------------------------------
+
+SC342-3 Fixed   Hangup can be used to cheat.    
+SC343-1 Fixed   Monsters that can't blow can still use a whistle.   
+SC343-2 fixed   If you are poison resistant, potions of sickness can only kill you if they are blessed. 
+SC343-3 fixed   Water walking boots are not handled properly on lava.   
+SC343-4 Fixed   Reviving corpses or reanimating statues in a shop does not get charged correctly.   
+SC343-5 fixed   Breaking container contents in a shop doesn't always charge for them.   
+SC343-6 fixed   Stealing a stack of items from a shop sometimes results in only being charged for one.  
+SC343-7 fixed   Zapping an unknown wand while blind sometimes gives out too much information.   
+SC343-8 fixed   Re-animating a statue containing gold produces too much gold.   
+SC343-9 Fixed   Medusa corpse from a level file behaves incorrectly.    
+SC343-10    Fixed   Player can raise HP and Pw by dancing with vampires.    
+SC343-11    fixed   It's possible to easily find the identity of a high priest on the Astral plane. 
+SC343-12    fixed   Hero using telepathy can abuse Call on the Astral Plane.    
+SC343-13    Open    While blind and levitating, too much information may be presented.  
+SC343-14    Fixed   Shopkeepers and priests may be teleported out of their shop or temple too easily.   
+SC343-15    Fixed   Nurses are not stoned by hero polymorphed into cockatrice.  
+SC343-16    fixed   Galatinous cubes can engulf Rider corpses.  
+SC343-17    Fixed   Stethoscope may unhide hidden mimic.    
+SC343-18    fixed   Escaping from lava can leave hero outside of time.  
+SC343-19    Fixed   Monsters seeking the Amulet attack temple priests to get it.    
+SC343-20    fixed   Hangup save while picking up gold in a shop may duplicate the gold. 
+SC343-21    fixed   Accounting is incorrect for containers dropped in a shop that does not sell them.   
+SC343-22    Fixed   The travel command allows grid bugs to move one step diagonally.
