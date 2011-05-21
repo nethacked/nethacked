@@ -374,6 +374,9 @@ typedef unsigned char	uchar;
 /* Sortloot */
 #define SORTLOOT
 
+/* Paranoid {hit, quit, remove} */
+#define PARANOID
+
 /* End of Section 5 */
 
 #include "global.h"	/* Define everything else according to choices above */
