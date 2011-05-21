@@ -222,6 +222,9 @@ struct instance_flags {
 #ifdef SHOW_BORN
 	boolean show_born;	/* show numbers of created monsters */
 #endif
+#ifdef SORTLOOT
+	char sortloot;          /* sort items to loot alphabetically */
+#endif
 /*
  * Window capability support.
  */

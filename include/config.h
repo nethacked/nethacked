@@ -371,6 +371,9 @@ typedef unsigned char	uchar;
 #define SHOW_BORN
 #define SHOW_EXTINCT
 
+/* Sortloot */
+#define SORTLOOT
+
 /* End of Section 5 */
 
 #include "global.h"	/* Define everything else according to choices above */
