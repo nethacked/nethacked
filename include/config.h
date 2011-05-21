@@ -377,6 +377,9 @@ typedef unsigned char	uchar;
 /* Paranoid {hit, quit, remove} */
 #define PARANOID
 
+/* HPmon, colored HP monitor */
+#define HPMON
+
 /* End of Section 5 */
 
 #include "global.h"	/* Define everything else according to choices above */
