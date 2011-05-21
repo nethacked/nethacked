@@ -388,6 +388,19 @@ struct autopickup_exception {
 };
 #endif /* AUTOPICKUP_EXCEPTIONS */
 
+struct _plinemsg {
+    xchar msgtype;
+    char *pattern;
+    struct _plinemsg *next;
+};
+
+E struct _plinemsg *pline_msg;
+
+#define MSGTYP_NORMAL	0
+#define MSGTYP_NOREP	1
+#define MSGTYP_NOSHOW	2
+#define MSGTYP_STOP	3
+
 #undef E
 
 #endif /* DECL_H */

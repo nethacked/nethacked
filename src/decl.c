@@ -284,6 +284,8 @@ char *fqn_prefix_names[PREFIX_COUNT] = { "hackdir", "leveldir", "savedir",
 					"lockdir", "configdir", "troubledir" };
 #endif
 
+struct _plinemsg *pline_msg = NULL;
+
 /* dummy routine used to force linkage */
 void
 decl_init()
