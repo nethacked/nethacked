@@ -367,6 +367,10 @@ typedef unsigned char	uchar;
                                          * to prevent definition by users */
 #define DUMPMSGS 20     /* Number of latest messages in the dump file  */
 
+/* show{born, extinct} patch */
+#define SHOW_BORN
+#define SHOW_EXTINCT
+
 /* End of Section 5 */
 
 #include "global.h"	/* Define everything else according to choices above */

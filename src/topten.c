@@ -252,6 +252,7 @@ int how;
 	FILE *rfile;
 	register int flg = 0;
 	boolean t0_used;
+	char buf[15];
 #ifdef LOGFILE
 	FILE *lfile;
 #endif /* LOGFILE */
@@ -331,6 +332,16 @@ int how;
 			(void) strncat(t0->death, killer, DTHSZ);
 			break;
 	}
+#ifdef LOG_MOVES
+	/* jl 08.2000 - 09.2003 */
+	sprintf(buf," {%ld}",moves);
+	if (strlen(t0->death) + strlen(buf) < DTHSZ)
+	    Strcat(t0->death, buf);
+	if (wizard && strlen(t0->death) < DTHSZ - 6)
+	    Strcat(t0->death, " {wiz}");
+	if (discover && strlen(t0->death) < DTHSZ - 6)
+	    Strcat(t0->death, " {exp}");
+#endif
 	t0->birthdate = yyyymmdd(u.ubirthday);
 	t0->deathdate = yyyymmdd((time_t)0L);
 	t0->tt_next = 0;
