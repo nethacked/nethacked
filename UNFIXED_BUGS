@@ -459,8 +459,6 @@ SC343-7 fixed   Zapping an unknown wand while blind sometimes gives out too much
 SC343-8 fixed   Re-animating a statue containing gold produces too much gold.   
 SC343-9 Fixed   Medusa corpse from a level file behaves incorrectly.    
 SC343-10    Fixed   Player can raise HP and Pw by dancing with vampires.    
-SC343-11    fixed   It's possible to easily find the identity of a high priest on the Astral plane. 
-SC343-12    fixed   Hero using telepathy can abuse Call on the Astral Plane.    
 SC343-13    Open    While blind and levitating, too much information may be presented.  
 SC343-14    Fixed   Shopkeepers and priests may be teleported out of their shop or temple too easily.   
 SC343-15    Fixed   Nurses are not stoned by hero polymorphed into cockatrice.  
