@@ -75,6 +75,9 @@ static struct Bool_Opt
 	{"color",         &iflags.wc_color, FALSE, SET_IN_GAME},	/*WC*/
 # endif
 	{"confirm",&flags.confirm, TRUE, SET_IN_GAME},
+#ifdef CONFIRM_LOCKING
+	{"confirm_locking", &iflags.confirm_locking, TRUE, SET_IN_GAME},
+#endif
 #if defined(TERMLIB) && !defined(MAC_GRAPHICS_ENV)
 	{"DECgraphics", &iflags.DECgraphics, FALSE, SET_IN_GAME},
 #else

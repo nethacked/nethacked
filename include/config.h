@@ -401,6 +401,17 @@ typedef unsigned char	uchar;
 /* HPmon, colored HP monitor */
 #define HPMON
 
+#define CONFIRM_LOCKING	/* Confirmation messages for (un)locking doors or
+						 * containers if only one container in the location
+						 * if confirm_locking is set in the options.
+						 * Default is on.
+						 * Can be set during the game.
+						 */
+
+#define X_TWOWEAPON		/* X command is changed to twoweapon; meta-x and
+						 * #explore is for entering the explore-mode.
+						 */
+
 /* End of Section 5 */
 
 #include "global.h"	/* Define everything else according to choices above */

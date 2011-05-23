@@ -1859,7 +1859,12 @@ static const struct func_tab cmdlist[] = {
 	{'W', FALSE, dowear},
 	{M('w'), FALSE, dowipe},
 	{'x', FALSE, doswapweapon},
+#ifdef X_TWOWEAPON
+	{'X', FALSE, dotwoweapon},
+	{M('x'), TRUE, enter_explore_mode},
+#else
 	{'X', TRUE, enter_explore_mode},
+#endif
 /*	'y', 'Y' : go nw */
 	{'z', FALSE, dozap},
 	{'Z', TRUE, docast},
@@ -1901,6 +1906,9 @@ struct ext_func_tab extcmdlist[] = {
 	{"dip", "dip an object into something", dodip, FALSE},
 	{"enhance", "advance or check weapons skills", enhance_weapon_skill,
 							TRUE},
+#ifdef X_TWOWEAPON
+	{"explore", "enter the explore mode", enter_explore_mode, TRUE},
+#endif
 	{"force", "force a lock", doforce, FALSE},
 	{"invoke", "invoke an object's powers", doinvoke, TRUE},
 	{"jump", "jump to a location", dojump, FALSE},

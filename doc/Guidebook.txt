@@ -796,8 +796,8 @@
 
 
 
-          X    Enter explore (discovery) mode, explained in its own section
-               later.
+          X    Toggle  two-weapon combat on or off.  Note that you must use
+               suitable weapons for this type of combat.
 
           ^X   Display your name, role, race, gender, and alignment as well
                as the various deities in your game.
@@ -883,6 +883,10 @@
 
           #enhance
                Advance or check weapons and spell skills.
+
+          #explore
+               Enter explore (discovery) mode, explained in its own section
+               later.
 
           #force
                Force a lock.
@@ -1011,6 +1015,8 @@
           M-v  #version
 
           M-w  #wipe
+
+          M-x  #explore
 
                If  the number_pad option is on, some additional letter com-
           mands are available:
@@ -2223,6 +2229,10 @@
             Have  user  confirm  attacks  on  pets,  shopkeepers, and other
             peaceable creatures (default on).
 
+          confirm_locking
+            Have user  confirm when locking  or unlocking a  door or single 
+            container (default on).
+          
           DECgraphics
             Use a predefined selection  of  characters  from  the  DEC  VT-
             xxx/DEC  Rainbow/ANSI line-drawing character set to display the
