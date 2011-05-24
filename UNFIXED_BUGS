@@ -206,7 +206,6 @@ C343-175	fixed	Chatting to hostile prisoners may give an inappropriate message.
 C343-176	fixed	Disintegration breath hitting equipment carried by monsters is not handled properly; if the monster life-saves the situation is worse; saddles are especially troublesome.	
 C343-177	fixed	First false rumor is displayed as gibberish on some platforms.	
 C343-178	fixed	Wisdom is mishandled when rumors are used for random graffiti.	
-C343-179	fixed	If a monster is killed or tamed while over water (or by a drawbridge) while carrying a potion of acid, the game may panic.	
 C343-180	fixed	In an obscure case on special levels, troll corpses may fail to revive and lizard corpses may revive.	
 C343-181	Fixed	The hero is welcomed to Delphi even if the Oracle was previously angered.	
 C343-182	fixed	Putting on the Eyes of the Overworld while blind gives an ungrammatical message.	
