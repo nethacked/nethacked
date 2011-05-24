@@ -350,7 +350,6 @@ C343-320	Fixed	Reading scroll of mail break illiterate conduct.
 C343-321	Fixed	Hero and monsters can walk through a long worm's tail diagonally.	
 C343-322	Fixed	Forced attack on a boulder says "you attack thin air."	
 C343-323	Fixed	Objects dropped as a monster dies don't interact properly with the environment.	
-C343-324	fixed	Cutting a long worm in two will crash the game if the cut takes the worm to 1 HP or if long worms had become extinct.	
 C343-325	Fixed	Hole in ice may be described as a "moat."	
 C343-326	Fixed	Open and close commands may give inappropriate feedback near a drawbridge.	
 C343-327	fixed	Message "suddenly you cannot see the" monster can be displayed when the monster remains visible for some reason.	
