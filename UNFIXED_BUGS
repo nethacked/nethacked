@@ -129,7 +129,6 @@ C343-96	fixed	If player aborts "In what direction?" question, prompt may remain 
 C343-97	fixed	^R and ^L don't work in numberpad mode	
 C343-98	fixed	Chatting with quest leader brought back from the dead doesn't work.	
 C343-99	fixed	Hero can still see for brief period after being blinded by potion vapors.	
-C343-100	fixed	Game may crash if thrown potion hits bars before a monster.	
 C343-101	fixed	The hero can see some things while asleep.	
 C343-102	Open	Messages delivered when the ceiling collapses on a swallowed hero need revision.	
 C343-103	fixed	The hero is not protected from a mind flayer during successful prayer.	
