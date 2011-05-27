@@ -1698,6 +1698,7 @@ E void FDECL(genl_outrip, (winid,int));
 
 /* ### rnd.c ### */
 
+E void NDECL(check_reseed);
 E int FDECL(rn2, (int));
 E int FDECL(rnl, (int));
 E int FDECL(rnd, (int));
