@@ -129,7 +129,6 @@ C343-96	fixed	If player aborts "In what direction?" question, prompt may remain 
 C343-97	fixed	^R and ^L don't work in numberpad mode	
 C343-98	fixed	Chatting with quest leader brought back from the dead doesn't work.	
 C343-99	fixed	Hero can still see for brief period after being blinded by potion vapors.	
-C343-100	fixed	Game may crash if thrown potion hits bars before a monster.	
 C343-101	fixed	The hero can see some things while asleep.	
 C343-102	Open	Messages delivered when the ceiling collapses on a swallowed hero need revision.	
 C343-103	fixed	The hero is not protected from a mind flayer during successful prayer.	
@@ -206,7 +205,6 @@ C343-175	fixed	Chatting to hostile prisoners may give an inappropriate message.
 C343-176	fixed	Disintegration breath hitting equipment carried by monsters is not handled properly; if the monster life-saves the situation is worse; saddles are especially troublesome.	
 C343-177	fixed	First false rumor is displayed as gibberish on some platforms.	
 C343-178	fixed	Wisdom is mishandled when rumors are used for random graffiti.	
-C343-179	fixed	If a monster is killed or tamed while over water (or by a drawbridge) while carrying a potion of acid, the game may panic.	
 C343-180	fixed	In an obscure case on special levels, troll corpses may fail to revive and lizard corpses may revive.	
 C343-181	Fixed	The hero is welcomed to Delphi even if the Oracle was previously angered.	
 C343-182	fixed	Putting on the Eyes of the Overworld while blind gives an ungrammatical message.	
@@ -350,7 +348,6 @@ C343-320	Fixed	Reading scroll of mail break illiterate conduct.
 C343-321	Fixed	Hero and monsters can walk through a long worm's tail diagonally.	
 C343-322	Fixed	Forced attack on a boulder says "you attack thin air."	
 C343-323	Fixed	Objects dropped as a monster dies don't interact properly with the environment.	
-C343-324	fixed	Cutting a long worm in two will crash the game if the cut takes the worm to 1 HP or if long worms had become extinct.	
 C343-325	Fixed	Hole in ice may be described as a "moat."	
 C343-326	Fixed	Open and close commands may give inappropriate feedback near a drawbridge.	
 C343-327	fixed	Message "suddenly you cannot see the" monster can be displayed when the monster remains visible for some reason.	
@@ -459,8 +456,6 @@ SC343-7 fixed   Zapping an unknown wand while blind sometimes gives out too much
 SC343-8 fixed   Re-animating a statue containing gold produces too much gold.   
 SC343-9 Fixed   Medusa corpse from a level file behaves incorrectly.    
 SC343-10    Fixed   Player can raise HP and Pw by dancing with vampires.    
-SC343-11    fixed   It's possible to easily find the identity of a high priest on the Astral plane. 
-SC343-12    fixed   Hero using telepathy can abuse Call on the Astral Plane.    
 SC343-13    Open    While blind and levitating, too much information may be presented.  
 SC343-14    Fixed   Shopkeepers and priests may be teleported out of their shop or temple too easily.   
 SC343-15    Fixed   Nurses are not stoned by hero polymorphed into cockatrice.  

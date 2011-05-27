@@ -18,10 +18,31 @@ extern int NDECL(rand);
 
 #ifdef OVL0
 
+static int reseed_period = 0;
+static int reseed_count = 0;
+
+void
+check_reseed()
+{
+    reseed_count++;
+    if (reseed_count > reseed_period) {
+	FILE *fptr = NULL;
+	int rnd[2];
+
+	fptr = fopen("/dev/urandom","r");
+	if (fptr) fread((void *)rnd, sizeof(int),2,fptr);
+	fclose(fptr);
+	srandom((int) (time((time_t *)0)) + rnd[0]);
+	reseed_period = (rnd[1] % 700) + 10;
+	reseed_count = 0;
+    }
+}
+
 int
 rn2(x)		/* 0 <= rn2(x) < x */
 register int x;
 {
+    check_reseed();
 #ifdef DEBUG
 	if (x <= 0) {
 		impossible("rn2(%d) attempted", x);
@@ -42,7 +63,7 @@ rnl(x)		/* 0 <= rnl(x) < x; sometimes subtracting Luck */
 register int x;	/* good luck approaches 0, bad luck approaches (x-1) */
 {
 	register int i;
-
+    check_reseed();
 #ifdef DEBUG
 	if (x <= 0) {
 		impossible("rnl(%d) attempted", x);
@@ -67,6 +88,7 @@ int
 rnd(x)		/* 1 <= rnd(x) <= x */
 register int x;
 {
+    check_reseed();
 #ifdef DEBUG
 	if (x <= 0) {
 		impossible("rnd(%d) attempted", x);
@@ -87,6 +109,7 @@ d(n,x)		/* n <= d(n,x) <= (n*x) */
 register int n, x;
 {
 	register int tmp = n;
+    check_reseed();
 
 #ifdef DEBUG
 	if (x < 0 || n < 0 || (x == 0 && n != 0)) {

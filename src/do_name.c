@@ -294,9 +294,13 @@ do_mname()
 	/* strip leading and trailing spaces; unnames monster if all spaces */
 	(void)mungspaces(buf);
 
-	if (mtmp->data->geno & G_UNIQ)
-	    pline("%s doesn't like being called names!", Monnam(mtmp));
-	else
+	if (mtmp->data->geno & G_UNIQ) {
+        if (mtmp->data == &mons[PM_HIGH_PRIEST] && Is_astralevel(&u.uz)) {
+            pline_The("high priest%s doesn't like being called names!", mtmp->female ? "ess" : "");
+        } else {
+            pline("%s doesn't like being called names!", Monnam(mtmp));
+        }
+    } else
 	    (void) christen_monst(mtmp, buf);
 	return(0);
 }
