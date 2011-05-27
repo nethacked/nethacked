@@ -325,7 +325,7 @@ learn()
 	if (Confusion) {		/* became confused while learning */
 	    (void) confused_book(book);
 	    book = 0;			/* no longer studying */
-	    nomul(delay);		/* remaining delay is uninterrupted */
+	    nomul(delay, "reading a book");		/* remaining delay is uninterrupted */
 	    delay = 0;
 	    return(0);
 	}
@@ -463,7 +463,7 @@ register struct obj *spellbook;
 		if (too_hard) {
 		    boolean gone = cursed_book(spellbook);
 
-		    nomul(delay);			/* study time */
+		    nomul(delay, "reading a book");			/* study time */
 		    delay = 0;
 		    if(gone || !rn2(3)) {
 			if (!gone) pline_The("spellbook crumbles to dust!");
@@ -478,7 +478,7 @@ register struct obj *spellbook;
 		    if (!confused_book(spellbook)) {
 			spellbook->in_use = FALSE;
 		    }
-		    nomul(delay);
+		    nomul(delay, "reading a book");
 		    delay = 0;
 		    return(1);
 		}
@@ -1113,6 +1113,35 @@ int *spell_no;
 	}
 	return FALSE;
 }
+
+#ifdef DUMP_LOG
+void 
+dump_spells()
+{
+	int i;
+	char buf[BUFSZ];
+
+	if (spellid(0) == NO_SPELL) {
+	    dump("", "You didn't know any spells.");
+	    dump("", "");
+	    return;
+	}
+	dump("", "Spells known in the end");
+
+	Sprintf(buf, "%-20s   Level    %-12s Fail", "    Name", "Category");
+	dump("  ",buf);
+	for (i = 0; i < MAXSPELL && spellid(i) != NO_SPELL; i++) {
+		Sprintf(buf, "%c - %-20s  %2d%s   %-12s %3d%%",
+			spellet(i), spellname(i), spellev(i),
+			spellknow(i) ? " " : "*",
+			spelltypemnemonic(spell_skilltype(spellid(i))),
+			100 - percent_success(i));
+		dump("  ", buf);
+	}
+	dump("","");
+
+} /* dump_spells */
+#endif
 
 /* Integer square root function without using floating point. */
 STATIC_OVL int

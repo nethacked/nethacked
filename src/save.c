@@ -48,6 +48,10 @@ static long nulls[10];
 #define HUP
 #endif
 
+#ifdef MENU_COLOR
+extern struct menucoloring *menu_colorings;
+#endif
+
 /* need to preserve these during save to avoid accessing freed memory */
 static unsigned ustuck_id = 0, usteed_id = 0;
 
@@ -57,7 +61,7 @@ dosave()
 	clear_nhwindow(WIN_MESSAGE);
 	if(yn("Really save?") == 'n') {
 		clear_nhwindow(WIN_MESSAGE);
-		if(multi > 0) nomul(0);
+		if(multi > 0) nomul(0, 0);
 	} else {
 		clear_nhwindow(WIN_MESSAGE);
 		pline("Saving...");
@@ -210,6 +214,7 @@ dosave0()
 #ifdef STEED
 	usteed_id = (u.usteed ? u.usteed->m_id : 0);
 #endif
+
 	savelev(fd, ledger_no(&u.uz), WRITE_SAVE | FREE_SAVE);
 	savegamestate(fd, WRITE_SAVE | FREE_SAVE);
 
@@ -274,6 +279,10 @@ savegamestate(fd, mode)
 register int fd, mode;
 {
 	int uid;
+#if defined(RECORD_REALTIME) || defined(REALTIME_ON_BOTL)
+        time_t realtime;
+#endif
+
 
 #ifdef MFLOPPY
 	count_only = (mode & COUNT_SAVE);
@@ -319,6 +328,15 @@ register int fd, mode;
 	savefruitchn(fd, mode);
 	savenames(fd, mode);
 	save_waterlevel(fd, mode);
+
+#ifdef RECORD_ACHIEVE
+        bwrite(fd, (genericptr_t) &achieve, sizeof achieve);
+#endif
+#if defined(RECORD_REALTIME) || defined(REALTIME_ON_BOTL)
+        realtime = get_realtime();
+        bwrite(fd, (genericptr_t) &realtime, sizeof realtime);
+#endif
+
 	bflush(fd);
 }
 
@@ -953,12 +971,35 @@ free_dungeons()
 	return;
 }
 
+#ifdef MENU_COLOR
+void
+free_menu_coloring()
+{
+    struct menucoloring *tmp = menu_colorings;
+
+    while (tmp) {
+	struct menucoloring *tmp2 = tmp->next;
+# ifdef MENU_COLOR_REGEX
+	(void) regfree(&tmp->match);
+# else
+	free(tmp->match);
+# endif
+	free(tmp);
+	tmp = tmp2;
+    }
+}
+#endif /* MENU_COLOR */
+
 void
 freedynamicdata()
 {
 	unload_qtlist();
 	free_invbuf();	/* let_to_name (invent.c) */
 	free_youbuf();	/* You_buf,&c (pline.c) */
+#ifdef MENU_COLOR
+	free_menu_coloring();
+#endif
+    msgpline_free();
 	tmp_at(DISP_FREEMEM, 0);	/* temporary display effects */
 #ifdef FREE_ALL_MEMORY
 # define freeobjchn(X)	(saveobjchn(0, X, FREE_SAVE),  X = 0)

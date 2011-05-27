@@ -294,13 +294,29 @@ pick_lock(pick) /* pick a lock with a given object */
 
 	    count = 0;
 	    c = 'n';			/* in case there are no boxes here */
+
+#ifdef CONFIRM_LOCKING
+		for(otmp = level.objects[cc.x][cc.y]; otmp; otmp = otmp->nexthere)
+			if (Is_box(otmp)) ++count;
+		if ((count == 1) && !iflags.confirm_locking) c = 'y';
+#endif
+
 	    for(otmp = level.objects[cc.x][cc.y]; otmp; otmp = otmp->nexthere)
 		if (Is_box(otmp)) {
+
+#ifndef CONFIRM_LOCKING
 		    ++count;
+#endif
+
 		    if (!can_reach_floor()) {
 			You_cant("reach %s from up here.", the(xname(otmp)));
 			return 0;
 		    }
+
+#ifdef CONFIRM_LOCKING
+			if ((count > 1) || iflags.confirm_locking) {
+#endif
+
 		    it = 0;
 		    if (otmp->obroken) verb = "fix";
 		    else if (!otmp->olocked) verb = "lock", it = 1;
@@ -314,6 +330,10 @@ pick_lock(pick) /* pick a lock with a given object */
 		    c = ynq(qbuf);
 		    if(c == 'q') return(0);
 		    if(c == 'n') continue;
+
+#ifdef CONFIRM_LOCKING
+			}
+#endif
 
 		    if (otmp->obroken) {
 			You_cant("fix its broken lock with %s.", doname(pick));
@@ -401,11 +421,19 @@ pick_lock(pick) /* pick a lock with a given object */
 		    }
 #endif
 
+#ifdef CONFIRM_LOCKING
+			if (iflags.confirm_locking) {
+#endif
+
 		    Sprintf(qbuf,"%sock it?",
 			(door->doormask & D_LOCKED) ? "Unl" : "L" );
 
 		    c = yn(qbuf);
 		    if(c == 'n') return(0);
+
+#ifdef CONFIRM_LOCKING
+			}
+#endif
 
 		    switch(picktyp) {
 #ifdef TOURIST

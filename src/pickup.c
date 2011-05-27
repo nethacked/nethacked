@@ -267,7 +267,7 @@ boolean picked_some;
 
 	/* If there are objects here, take a look. */
 	if (ct) {
-	    if (flags.run) nomul(0);
+	    if (flags.run) nomul(0, 0);
 	    flush_screen(1);
 	    (void) look_here(ct, picked_some);
 	} else {
@@ -440,7 +440,7 @@ int what;		/* should be a long */
 		}
 
 		/* if there's anything here, stop running */
-		if (OBJ_AT(u.ux,u.uy) && flags.run && flags.run != 8 && !flags.nopick) nomul(0);
+		if (OBJ_AT(u.ux,u.uy) && flags.run && flags.run != 8 && !flags.nopick) nomul(0, 0);
 	}
 
 	add_valid_menu_class(0);	/* reset */
@@ -690,9 +690,15 @@ menu_item **pick_list;		/* return list of items picked */
 int how;			/* type of query */
 boolean FDECL((*allow), (OBJ_P));/* allow function */
 {
+#ifdef SORTLOOT
+	int i, j;
+#endif
 	int n;
 	winid win;
 	struct obj *curr, *last;
+#ifdef SORTLOOT
+	struct obj **oarray;
+#endif
 	char *pack;
 	anything any;
 	boolean printed_type_name;
@@ -717,6 +723,33 @@ boolean FDECL((*allow), (OBJ_P));/* allow function */
 	    return 1;
 	}
 
+#ifdef SORTLOOT
+	/* Make a temporary array to store the objects sorted */
+	oarray = (struct obj **)alloc(n*sizeof(struct obj*));
+
+	/* Add objects to the array */
+	i = 0;
+	for (curr = olist; curr; curr = FOLLOW(curr, qflags)) {
+	  if ((*allow)(curr)) {
+	    if (iflags.sortloot == 'f' ||
+		(iflags.sortloot == 'l' && !(qflags & USE_INVLET)))
+	      {
+		/* Insert object at correct index */
+		for (j = i; j; j--)
+		  {
+		    if (strcmpi(cxname2(curr), cxname2(oarray[j-1]))>0) break;
+		    oarray[j] = oarray[j-1];
+		  }
+		oarray[j] = curr;
+		i++;
+	      } else {
+		/* Just add it to the array */
+		oarray[i++] = curr;
+	      }
+	  }
+	}
+#endif /* SORTLOOT */
+
 	win = create_nhwindow(NHW_MENU);
 	start_menu(win);
 	any.a_obj = (struct obj *) 0;
@@ -730,7 +763,12 @@ boolean FDECL((*allow), (OBJ_P));/* allow function */
 	pack = flags.inv_order;
 	do {
 	    printed_type_name = FALSE;
+#ifdef SORTLOOT
+	    for (i = 0; i < n; i++) {
+		curr = oarray[i];
+#else /* SORTLOOT */
 	    for (curr = olist; curr; curr = FOLLOW(curr, qflags)) {
+#endif /* SORTLOOT */
 		if ((qflags & FEEL_COCKATRICE) && curr->otyp == CORPSE &&
 		     will_feel_cockatrice(curr, FALSE)) {
 			destroy_nhwindow(win);	/* stop the menu and revert */
@@ -758,6 +796,9 @@ boolean FDECL((*allow), (OBJ_P));/* allow function */
 	    pack++;
 	} while (qflags & INVORDER_SORT && *pack);
 
+#ifdef SORTLOOT
+	free(oarray);
+#endif
 	end_menu(win, qstr);
 	n = select_menu(win, how, pick_list);
 	destroy_nhwindow(win);
@@ -1301,7 +1342,7 @@ boolean telekinesis;	/* not picking it up directly by hand */
 		    obj->quan -= count;
 	    }
 	    flags.botl = 1;
-	    if (flags.run) nomul(0);
+	    if (flags.run) nomul(0, 0);
 	    return 1;
 #endif
 	} else if (obj->otyp == CORPSE) {
@@ -2101,7 +2142,7 @@ register int held;
 	    (void) chest_trap(obj, HAND, FALSE);
 	    /* even if the trap fails, you've used up this turn */
 	    if (multi >= 0) {	/* in case we didn't become paralyzed */
-		nomul(-1);
+		nomul(-1, "opening a container");
 		nomovemsg = "";
 	    }
 	    return 1;

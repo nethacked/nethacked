@@ -1206,7 +1206,7 @@ dosacrifice()
 		    if (sgn(u.ualign.type) == sgn(dmon->data->maligntyp))
 			dmon->mpeaceful = TRUE;
 		    You("are terrified, and unable to move.");
-		    nomul(-3);
+		    nomul(-3, "being terrified of a demon");
 		} else pline_The("%s.", demonless_msg);
 	    }
 
@@ -1287,6 +1287,11 @@ dosacrifice()
 		done(ESCAPED);
 	    } else { /* super big win */
 		adjalign(10);
+
+#ifdef RECORD_ACHIEVE
+                achieve.ascended = 1;
+#endif
+
 pline("An invisible choir sings, and you are bathed in radiance...");
 		godvoice(altaralign, "Congratulations, mortal!");
 		display_nhwindow(WIN_MESSAGE, FALSE);
@@ -1579,7 +1584,7 @@ dopray()
 	}
     }
 #endif
-    nomul(-3);
+    nomul(-3, "praying");
     nomovemsg = "You finish your prayer.";
     afternmv = prayer_done;
 
@@ -1739,7 +1744,7 @@ doturn()
 		    }
 	    }
 	}
-	nomul(-5);
+	nomul(-5, "trying to turn the monsters");
 	return(1);
 }
 

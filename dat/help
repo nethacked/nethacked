@@ -141,7 +141,7 @@ Commands:
         w       Wield weapon.  w- means wield nothing, use bare hands.
         W       Wear armor.
         x       Swap wielded and secondary weapons.
-        X       Switch the game to explore (discovery) mode.
+        X       Toggle two-weapon combat.
         ^X      Show your attributes.
         z       Zap a wand.
         Z       Cast a spell.

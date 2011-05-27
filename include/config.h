@@ -151,6 +151,7 @@
 #endif
 
 #define LOGFILE "logfile"	/* larger file for debugging purposes */
+#define XLOGFILE "xlogfile" /* even larger logfile */
 #define NEWS "news"		/* the file containing the latest hack news */
 #define PANICLOG "paniclog"	/* log of panic and impossible events */
 
@@ -340,6 +341,26 @@ typedef unsigned char	uchar;
 #define EXP_ON_BOTL	/* Show experience on bottom line */
 /* #define SCORE_ON_BOTL */	/* added by Gary Erickson (erickson@ucivax) */
 
+/* #define REALTIME_ON_BOTL */  /* Show elapsed time on bottom line.  Note:
+                                 * this breaks savefile compatibility. */
+
+/* The options in this section require the extended logfile support */
+#ifdef XLOGFILE
+#define RECORD_CONDUCT  /* Record conducts kept in logfile */
+#define RECORD_TURNS    /* Record turns elapsed in logfile */
+#define RECORD_ACHIEVE  /* Record certain notable achievements in the
+                         * logfile.  Note: this breaks savefile compatibility
+                         * due to the addition of the u_achieve struct. */
+#define RECORD_REALTIME /* Record the amount of actual playing time (in
+                         * seconds) in the record file.  Note: this breaks
+                         * savefile compatibility. */
+#define RECORD_START_END_TIME /* Record to-the-second starting and ending
+                               * times; stored as 32-bit values obtained
+                               * from time(2) (seconds since the Epoch.) */
+#define RECORD_GENDER0   /* Record initial gender in logfile */
+#define RECORD_ALIGN0   /* Record initial alignment in logfile */
+#endif
+
 /*
  * Section 5:  EXPERIMENTAL STUFF
  *
@@ -348,8 +369,48 @@ typedef unsigned char	uchar;
  * bugs left here.
  */
 
+#if defined(TTY_GRAPHICS) || defined(MSWIN_GRAPHICS)
+# define MENU_COLOR
+# define MENU_COLOR_REGEX 
+# define MENU_COLOR_REGEX_POSIX 
+/* if MENU_COLOR_REGEX is defined, use regular expressions (regex.h,
+ * GNU specific functions by default, POSIX functions with
+ * MENU_COLOR_REGEX_POSIX).
+ * otherwise use pmatch() to match menu color lines.
+ * pmatch() provides basic globbing: '*' and '?' wildcards.
+ */
+#endif
+
 /*#define GOLDOBJ */	/* Gold is kept on obj chains - Helge Hafting */
 /*#define AUTOPICKUP_EXCEPTIONS */ /* exceptions to autopickup */
+#define DUMP_LOG        /* Dump game end information to a file */
+/* #define DUMP_FN "/tmp/%n.nh" */      /* Fixed dumpfile name, if you want
+                                         * to prevent definition by users */
+#define DUMPMSGS 20     /* Number of latest messages in the dump file  */
+
+/* show{born, extinct} patch */
+#define SHOW_BORN
+#define SHOW_EXTINCT
+
+/* Sortloot */
+#define SORTLOOT
+
+/* Paranoid {hit, quit, remove} */
+#define PARANOID
+
+/* HPmon, colored HP monitor */
+#define HPMON
+
+#define CONFIRM_LOCKING	/* Confirmation messages for (un)locking doors or
+						 * containers if only one container in the location
+						 * if confirm_locking is set in the options.
+						 * Default is on.
+						 * Can be set during the game.
+						 */
+
+#define X_TWOWEAPON		/* X command is changed to twoweapon; meta-x and
+						 * #explore is for entering the explore-mode.
+						 */
 
 /* End of Section 5 */
 
