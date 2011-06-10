@@ -10,7 +10,7 @@ NetHacked is a community-driven project representing the best available version 
 
 Check our [wiki](https://github.com/nethacked/nethacked/wiki) to see which [bugs](https://github.com/nethacked/nethacked/wiki/Bugs-fixed) are already fixed, or to see the list of applied [interface patches](https://github.com/nethacked/nethacked/wiki/Interface-patches).
 
-NetHacked is **not** a fork or mod that introduces new features or changes existing game behaviour.  The only non-bugfix patches you will find here are the widely-accepted interface patches.
+NetHacked is **not** a fork or mod that introduces new features or changes existing game behaviour.  The only non-bugfix patches you will find here are widely-accepted interface patches, such as those used at [NAO](http://alt.org/nethack).
 
 How to get involved
 -----------------------------------------------------------------------------
