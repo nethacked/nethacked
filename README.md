@@ -1,7 +1,7 @@
 NetHacked
 =============================================================================
 
-NetHacked is a community-driven project representing the best available version of vanilla [NetHack 3.4.3](www.nethack.org).  Project goals include:
+NetHacked is a community-driven project representing the best available version of vanilla [NetHack 3.4.3](http://www.nethack.org).  Project goals include:
 
 - To incorporate all currently-available bug fixes & to fix as many additional
   bugs as possible.
