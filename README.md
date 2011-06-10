@@ -6,7 +6,7 @@ NetHacked is a community-driven project representing the best available version 
 - To incorporate all currently-available bug fixes & to fix as many additional
   bugs as possible.
 - To apply widely-accepted interface enhancements in use by the community.
-- **To become the *de facto* "NetHack 3.4.4", recognized by the community as the gold standard source repository for vanilla NetHack 3.4.3.**
+- **To become the *de facto* "NetHack 3.4.4", recognized by the community as the gold standard source repository for vanilla NetHack.**
 
 NetHacked is **not** a fork or mod that introduces new features or changes existing game behavior.  The only non-bugfix patches you will find here are widely-accepted interface patches, such as those used at [NAO](http://alt.org/nethack).
 
