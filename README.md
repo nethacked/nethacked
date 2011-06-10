@@ -29,9 +29,9 @@ While pull requests are the preferred method for tracking patch submissions, the
 
 Other ways to help:
 
-1. Flesh out the wiki.
-2. Submit binaries (particularly for Windows).
-3. Give feedback & suggestions!  They are always appreciated.
+- Flesh out the wiki.
+- Submit binaries (particularly for Windows).
+- Give feedback & suggestions!  They are always appreciated.
 
 If you'd like to help the project in some other way, please let us know.  Contact us via GitHub, or via email to *nethacked dot project at gmail*.
 
