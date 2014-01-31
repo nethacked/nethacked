@@ -1,0 +1,17 @@
+                Instructions for installing NetHack 3.4 on OSX
+                ==============================================
+
+This automates the mac installation procedure described in 
+http://nethack.wikia.com/wiki/Compiling
+
+You will need to have the Xcode developer command line tools installed in order to be able to compile NetHack (check the CDs that came with your copy of Mac OS X).
+
+In this directory, run 
+
+sh setup.sh
+
+In the top level directory, run
+
+make
+sudo make install
+
